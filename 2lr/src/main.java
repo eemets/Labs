@@ -7,6 +7,7 @@ public class main {
         var out = System.out;
         Scanner in = new Scanner(System.in);
 
+        out.print("Yemets\n");
         out.print("Enter string\t");
         var str = in.nextLine();
 

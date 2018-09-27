@@ -5,6 +5,7 @@ public class main {
         var in = new Scanner(System.in);
         var out = System.out;
 
+        out.print("Yemets\n");
         var p1 = new Patient();
         try{
             out.print("Enter id\t");

@@ -5,6 +5,7 @@ public class main {
         var out = System.out;
         var sc = new Scanner(System.in);
 
+        out.print("Yemets\n");
         out.print("Enter n:\t");
         var n = sc.nextInt();
 
