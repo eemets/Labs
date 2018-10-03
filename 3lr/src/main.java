@@ -5,7 +5,6 @@ public class main {
         var in = new Scanner(System.in);
         var out = System.out;
 
-        out.print("Yemets\n");
         var p1 = new Patient();
         try{
             out.print("Enter id\t");
@@ -26,7 +25,7 @@ public class main {
             p1.setDiagnose(in.next());
 
             out.print("\n\n");
-            out.print(p1.getAllFormatted());
+            out.print(p1.printAllFormatted());
         }catch (Exception ex){
             out.print(ex.toString());
         }
