@@ -1,42 +1,51 @@
 class Patient {
     private long ID;
-    private String firstName;
-    private String lastName;
-    private String midName;
-    private String address;
+    private StringBuilder firstName;
+    private StringBuilder lastName;
+    private StringBuilder midName;
+    private StringBuilder address;//
     private long phoneNum;
     private long numCard;
-    private String diagnose;
+    private StringBuilder diagnose;
 
     Patient(){
         ID = phoneNum = numCard = 0;
-        firstName = lastName = midName = address = diagnose = "noname";
+        firstName = lastName = midName = address = diagnose = new StringBuilder("none");
     }
-    private long getID(){return ID;}
-    private String getFirstName(){return firstName;}
-    private String getLastName(){return lastName;}
-    private String getMidName(){return  midName;}
-    private String getAddress(){return address;}
-    private long getPhoneNum(){return phoneNum;}
-    private long getNumCard(){return numCard;}
-    private String getDiagnose(){return diagnose;}
-    String printAllFormatted(){
-        return "Ідентифікаційний номер\t" + getID() + "\n" +
-                "Ім'я\t" + getFirstName() + "\n" +
-                "По-батькові\t" + getMidName() + "\n" +
-                "Прізвище\t" + getLastName() + "\n" +
-                "Адреса\t" + getAddress() + "\n" +
-                "Номер телефону\t" + getPhoneNum() + "\n" +
-                "Номер картки\t" + getNumCard() + "\n" +
-                "Діагноз\t" + getDiagnose() + "\n";
+    Patient(long ID, StringBuilder firstName,StringBuilder lastName, StringBuilder midName, StringBuilder address,
+                 long phoneNum, long numCard, StringBuilder diagnose){
+        this.ID = ID; this.firstName=firstName;this.lastName=lastName;
+        this.midName=midName; this.address=address;
+        this.phoneNum=phoneNum; this.numCard=numCard;
+        this.diagnose=diagnose;
     }
+    long getID(){return ID;}
+    StringBuilder getFirstName(){return firstName;}
+    StringBuilder getLastName(){return lastName;}
+    StringBuilder getMidName(){return  midName;}
+    StringBuilder getAddress(){return address;}
+    long getPhoneNum(){return phoneNum;}
+    long getNumCard(){return numCard;}
+    StringBuilder getDiagnose(){return diagnose;}
 
     void setID(long ID){this.ID = ID;}
-    void setFirstName(String firstName){this.firstName = firstName;}
-    void setLastName(String lastName){this.lastName = lastName;}
-    void setMidName(String midName){this.midName = midName;}
-    void setAddress(String address){this.address = address;}
+    void setFirstName(StringBuilder firstName){this.firstName = firstName;}
+    void setLastName(StringBuilder lastName){this.lastName = lastName;}
+    void setMidName(StringBuilder midName){this.midName = midName;}
+    void setAddress(StringBuilder address){this.address = address;}
     void setPhoneNum(long phoneNum){this.phoneNum = phoneNum;}
     void setNumCard(long numCard){this.numCard = numCard;}
-    void setDiagnose(String diagnose){this.diagnose = diagnose;}
+    void setDiagnose(StringBuilder diagnose){this.diagnose = diagnose;}
+
+    @Override
+    public String toString() {
+        return "Ідентифікаційний номер\t" + ID + "\n" +
+                "Ім'я\t" + firstName.toString() + "\n" +
+                "По-батькові\t" + midName.toString() + "\n" +
+                "Прізвище\t" + lastName.toString() + "\n" +
+                "Адреса\t" + address.toString() + "\n" +
+                "Номер телефону\t" + phoneNum + "\n" +
+                "Номер картки\t" + numCard + "\n" +
+                "Діагноз\t" + diagnose.toString() + "\n";
+    }
 }
