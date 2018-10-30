@@ -1,24 +1,30 @@
 public class Task extends Building{
-    String manager;
-    String Constructor;
-    String Client;
+    private StringBuilder manager;
+    private StringBuilder Constructor;
+    private StringBuilder Client;
+    private StringBuilder builder;
 
     Task(){
         super();
-        manager = Constructor = Client = "noname";
+        manager = Constructor = Client = builder = new StringBuilder("no name");
     }
-    Task(int floor, String address, int flat, float cost, String manager, String Constructor, String Client){
+    Task(int floor, StringBuilder address, int flat, float cost, StringBuilder manager,
+         StringBuilder Constructor, StringBuilder Client, StringBuilder builder){
         super(floor, address, flat, cost);
         this.manager = manager;
         this.Constructor = Constructor;
         this.Client = Client;
+        this.builder = builder;
     }
-    public String getManager(){return manager;}
-    public String getConstructor(){return Constructor;}
-    public String getClient(){return Client;}
-    public void setManager(String manager){this.manager=manager;}
-    public void setConstructor(String Constructor){this.Constructor=Constructor;}
-    public void setClient(String Client){this.Client=Client;}
+    public StringBuilder getManager(){return manager;}
+    public StringBuilder getConstructor(){return Constructor;}
+    public StringBuilder getClient(){return Client;}
+    public StringBuilder getBuilder(){return builder;}
+
+    public void setManager(StringBuilder manager){this.manager=manager;}
+    public void setConstructor(StringBuilder Constructor){this.Constructor=Constructor;}
+    public void setClient(StringBuilder Client){this.Client=Client;}
+    public void setBuilder(StringBuilder builder){this.builder=builder;}
 }
 /*Замовник надає Технічне завдання (ТЗ) на
     проектування багатоповерхового Дому. Менеджер
