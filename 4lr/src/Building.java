@@ -1,8 +1,8 @@
 public class Building {
-    private int floor;
-    private StringBuilder address;
-    private int flat;
-    private float cost;
+    protected int floor;
+    protected StringBuilder address;
+    protected int flat;
+    protected float cost;
 
     Building(){
         floor = flat = 0;
@@ -19,6 +19,7 @@ public class Building {
     public StringBuilder getAddress(){return address;}
     public int getFlat(){return flat;}
     public float getCost(){return cost;}
+
     public void setFloor(int floor){this.floor=floor;}
     public void setAddress(StringBuilder address){this.address=address;}
     public void setFlat(int flat){this.flat=flat;}

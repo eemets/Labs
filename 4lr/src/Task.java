@@ -25,6 +25,18 @@ public class Task extends Building{
     public void setConstructor(StringBuilder Constructor){this.Constructor=Constructor;}
     public void setClient(StringBuilder Client){this.Client=Client;}
     public void setBuilder(StringBuilder builder){this.builder=builder;}
+
+    @Override
+    public String toString(){
+        return "Num of floors\t"+floor
+                +"\nNum of flats\t"+flat
+                +"\nCost\t"+cost
+                +"\nAddress\t"+address
+                +"\nManager\t"+manager
+                +"\nConstructor\t"+Constructor
+                +"\nClient\t"+Client
+                +"\nBuilder\t"+builder;
+    }
 }
 /*Замовник надає Технічне завдання (ТЗ) на
     проектування багатоповерхового Дому. Менеджер
