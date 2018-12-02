@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class main {
     static Scanner in = new Scanner(System.in);
-
     static long ID;
     static StringBuilder firstName;
     static StringBuilder lastName;
@@ -12,7 +11,7 @@ public class main {
     static long numCard;
     static StringBuilder diagnose;
 
-    public static void inputData(){
+    private static void inputData(){
         var out = System.out;
         out.print("Enter id\t");
         ID = Long.parseLong(in.next());
@@ -40,7 +39,7 @@ public class main {
         diagnose = new StringBuilder(in.nextLine());
         diagnose.append(in.nextLine());
     }
-    public static void checkNullData(){
+    private static void checkNullData(){
         if(ID<=0 || phoneNum<=0 || numCard<=0) {throw new NumberFormatException();}
         if(firstName==null || lastName==null || midName==null || address==null || diagnose==null){
             throw new IllegalArgumentException();}
@@ -50,6 +49,24 @@ public class main {
         try{
             inputData();
             checkNullData();
+        }catch(NumberFormatException num){
+            out.println(num.getMessage());
+            out.println(num.getCause());
+            out.print("Fill data one more time? y/n\t");
+            if(in.next().charAt(0)=='y') {
+                inputData();
+                checkNullData();
+            }
+            else System.exit(0);
+        }catch (IllegalArgumentException ex){
+            out.println(ex.getMessage());
+            out.println(ex.getCause());
+            out.print("Fill data one more time? y/n\t");
+            if(in.next().charAt(0)=='y') {
+                inputData();
+                checkNullData();
+            }
+            else System.exit(0);
         }catch (Exception ex){
             out.println(ex.getMessage());
             out.println(ex.getCause());
