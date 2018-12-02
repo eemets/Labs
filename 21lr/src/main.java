@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.zip.DataFormatException;
 
 public class main {
     static Scanner in = new Scanner(System.in);
