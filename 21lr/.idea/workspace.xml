@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84ba9cd6-6f5f-4407-9c66-2d990875325f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../22lr/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../22lr/src/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1lr/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1lr/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1lr/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1lr/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1lr/1lr.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1lr/out/production/1lr/main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1lr/src/main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../22lr/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../22lr/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -101,7 +107,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543777220642" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543828309341" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
