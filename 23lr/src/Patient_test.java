@@ -2,6 +2,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.rmi.AccessException;
 import java.util.Properties;
 class Patient_test {
     private final long ID;
@@ -54,7 +55,7 @@ class Patient_test {
         }
 
         private long ID;
-        private StringBuilder firstName = new StringBuilder(properties.getProperty("none.str")); //new StringBuilder("first name");
+        private StringBuilder firstName = new StringBuilder(properties.getProperty("none.str"));
         private StringBuilder lastName = new StringBuilder(properties.getProperty("none.str"));
         private StringBuilder midName = new StringBuilder(properties.getProperty("none.str"));
         private StringBuilder address = new StringBuilder(properties.getProperty("none.str"));
