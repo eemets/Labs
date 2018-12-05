@@ -1,9 +1,12 @@
 import java.util.Scanner;
+import org.apache.log4j.Appender;
 import org.apache.log4j.Logger;
-
+import org.apache.log4j.Priority;
 
 public class main {
     static Scanner in = new Scanner(System.in);
+    private static Logger logger = Logger.getLogger(Patient_test.class);
+
     static long ID;
     static StringBuilder firstName;
     static StringBuilder lastName;
@@ -47,13 +50,13 @@ public class main {
             throw new IllegalArgumentException();}
     }
     public static void main(String[] args){
+        logger.setPriority(Priority.INFO);
         var out = System.out;
         try{
             inputData();
             checkNullData();
         }catch(NumberFormatException num){
-            out.println(num.getMessage());
-            out.println(num.getCause());
+            logger.error(num.getMessage()+"\n"+num.getCause());
             out.print("Fill data one more time? y/n\t");
             if(in.next().charAt(0)=='y') {
                 inputData();
